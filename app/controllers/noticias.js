@@ -17,7 +17,6 @@ module.exports.noticia = function(application, req, res) {
     var id_noticia = req.query;
 
     noticiasModel.getNoticia(id_noticia, function(error, result) {
-        console.log(result);
         res.render("noticias/noticia", { noticia: result } );
     });
 
